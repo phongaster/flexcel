@@ -1,0 +1,30 @@
+[
+  {
+    "ScreenDefinition": {
+      "__description__": "Pojo Name",
+      "tableContent": [
+        {
+          "excelHeader": "Screen Name",
+          "excelIndex": 2,
+          "excelColType": "String",
+          "excelValue": null,
+          "pojoAttribute": "screenName"
+        },
+        {
+          "excelHeader": "Area Name",
+          "excelIndex": 3,
+          "excelColType": "String",
+          "excelValue": null,
+          "pojoAttribute": "areaName"
+        },
+        {
+          "excelHeader": "Item Name",
+          "excelIndex": 4,
+          "excelColType": "String",
+          "excelValue": null,
+          "pojoAttribute": "itemName"
+        }
+      ]
+    }
+  }
+]
