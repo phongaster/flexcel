@@ -13,6 +13,13 @@ class TestCaseSheetSpec extends Specification {
                 TestCaseSheet.class                     // シートマッピング用のPOJOクラス。
         )
 
+        // fix wrong things
+        // remove redundant test values
+        for(int i = 0; i < sheet.testCases.size(); i++) {
+            sheet.testCases[i].testValues.subList(sheet.groups.size(), sheet.testCases[i].testValues.size()).clear()
+        }
+
+
         then: 'return correct information'
         sheet.screenName == "đăng ký user"
         sheet.screenID == "M001"

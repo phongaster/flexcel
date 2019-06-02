@@ -21,15 +21,15 @@ public class TestCaseRecordListener {
 
     @XlsPreLoad
     public void onPreLoad(TestCaseRecord targetObj, Sheet sheet, Configuration config, SheetBindingErrors errors) {
-        XlsArrayColumns annotation = TestCaseRecord.class.getAnnotation(XlsArrayColumns.class);
-        System.out.println("TestClass annotation before:" + annotation);
-
-        Map<String, Object> valuesMap = new HashMap<>();
-        valuesMap.put("size", 7);
-        RuntimeAnnotations.putAnnotation(TestCaseRecord.class, XlsArrayColumns.class, valuesMap);
-
-        annotation = TestCaseRecord.class.getAnnotation(XlsArrayColumns.class);
-        System.out.println("TestClass annotation after:" + annotation);
+//        XlsArrayColumns annotation = TestCaseRecord.class.getAnnotation(XlsArrayColumns.class);
+//        System.out.println("TestClass annotation before:" + annotation);
+//
+//        Map<String, Object> valuesMap = new HashMap<>();
+//        valuesMap.put("size", 7);
+//        RuntimeAnnotations.putAnnotation(TestCaseRecord.class, XlsArrayColumns.class, valuesMap);
+//
+//        annotation = TestCaseRecord.class.getAnnotation(XlsArrayColumns.class);
+//        System.out.println("TestClass annotation after:" + annotation);
 
         // hack annotation
 /*        AnnotationMappingInfo xmlInfo = createXml()

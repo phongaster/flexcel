@@ -5,6 +5,7 @@ import com.gh.mygreen.xlsmapper.util.CellPosition;
 import jp.phong.util.RuntimeAnnotations;
 import org.apache.poi.ss.usermodel.Sheet;
 
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,16 +39,26 @@ public class TestCaseRecord {
     private int numberOfDigits;
 
     // アドレス形式、配列にマッピング
-    @XlsArrayColumns(columnName = "test value",size = 6, optional = true)
+    // set max size 'cause can not change it here (final)
+    @XlsArrayColumns(columnName = "test value",size = 100, optional = true)
     private ArrayList<String> testValues;
 
     @XlsPostLoad
     public void handlePostLoad(final Sheet sheet) {
+
     }
 
     @XlsPreLoad
     public void handlePreLoad(final Sheet sheet) {
+//        XlsArrayColumns[] annotation = TestCaseRecord.class.getAnnotationsByType(XlsArrayColumns.class);
+//        System.out.println("TestClass annotation before:" + annotation);
 
+//        Map<String, Object> valuesMap = new HashMap<>();
+//        valuesMap.put("size", 6);
+//        RuntimeAnnotations.putAnnotation(TestCaseRecord.class, XlsArrayColumns.class, valuesMap);
+//
+//        annotation = TestCaseRecord.class.getAnnotation(XlsArrayColumns.class);
+//        System.out.println("TestClass annotation after:" + annotation);
     }
 }
 
